@@ -8,5 +8,5 @@ def home(request):
     print('home print')
     return render(
         request,
-        'home/home.html'
+        'home/index.html'
     )
