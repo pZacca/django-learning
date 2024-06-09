@@ -10,7 +10,24 @@ def blog(request):
     context = {
         'text': 'Estamos no Blog',
         'title': 'Blogzao - ',
-        'posts': posts
+        'posts': posts,
+    }
+
+    return render(
+        request,
+        'blog/index.html',
+        context
+    )
+
+
+def post(request, post_id):
+    found_post = next((post for post in posts if post['id'] == post_id), None)
+
+    context = {
+        'text': 'Estamos no Blog',
+        'title': 'Blogzao - ',
+        'posts': [found_post],
+        'post_id': post_id
     }
 
     return render(
