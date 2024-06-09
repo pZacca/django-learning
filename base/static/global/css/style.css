@@ -7,6 +7,16 @@
     box-sizing: border-box;
 }
 
+a {
+    color: #0078e8;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00478a;
+    text-decoration: underline;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -29,6 +39,29 @@ body {
     padding: 1.5rem;
     box-shadow: 3px 2px 5px rgba(0, 0, 0, .1);
     border-radius: 20px;
+}
+
+.menu {
+    background: #000000;
+    padding: 0 1.5rem;
+}
+
+.menu__links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__links a {
+    display: block;
+    color: #fff;
+    padding: 1.5rem;
+    background-color: #383838;
+    transition: background 0.5s ease-in-out;
+}
+
+.menu__links a:hover {
+    background-color: #666666;
 }
 
 @media (min-width: 600px) {
